@@ -23,6 +23,9 @@ const FirmList = () => {
               style={{
                 backgroundColor: "#f4f5f2",
               }}
+              sx={{
+                borderRadius: 5,
+              }}
             >
               <CardContent
                 style={{

@@ -32,6 +32,9 @@ const LawyerList = () => {
               style={{
                 backgroundColor: "#f4f5f2",
               }}
+              sx={{
+                borderRadius: 5,
+              }}
             >
               <CardContent
                 style={{
