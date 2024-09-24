@@ -13,12 +13,13 @@ const appointmentSlice = createSlice({
       const { firmId, lawyerId, time, date, description} = action.payload;
 
       const firm = state.firms.find((firm) => firm.id === firmId);
-        const lawyer = firm.lawyers.find((lawyer) => lawyer.id === lawyerId);
+      const lawyer = firm.lawyers.find((lawyer) => lawyer.id === lawyerId);
         
-          if (!lawyer.appointments[date]) {
+      if (!lawyer.appointments[date]) {
             lawyer.appointments[date] = [];
-          }
-          lawyer.appointments[date].push({ time, description });
+      }
+
+      lawyer.appointments[date].push({ time, description });
         
       
     },
@@ -26,17 +27,12 @@ const appointmentSlice = createSlice({
       const { firmId, lawyerId, date, index } = action.payload;
 
       const firm = state.firms.find((firm) => firm.id === firmId);
-      
-        const lawyer = firm.lawyers.find((lawyer) => lawyer.id === lawyerId);
-        if (lawyer && lawyer.appointments[date]) {
-          
-          lawyer.appointments[date].splice(index, 1);
+      const lawyer = firm.lawyers.find((lawyer) => lawyer.id === lawyerId);
 
-          
-          if (lawyer.appointments[date].length === 0) {
-            delete lawyer.appointments[date];
-          }
-        }
+      lawyer.appointments[date].splice(index, 1);
+      if (lawyer.appointments[date].length === 0) {
+              delete lawyer.appointments[date];
+      }
       
     },
   }

@@ -20,15 +20,13 @@ const FirmList = () => {
           <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={firm.id}>
             <Card
               elevation={3}
-              style={{
-                backgroundColor: "#f4f5f2",
-              }}
               sx={{
                 borderRadius: 5,
+                backgroundColor: "#f4f5f2",
               }}
             >
               <CardContent
-                style={{
+                sx={{
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -38,9 +36,9 @@ const FirmList = () => {
                   {firm.name}
                 </Typography>
                 <Button
-                  style={{
+                  sx={{
                     backgroundColor: "#507687",
-                    borderRadius: 10,
+                    borderRadius: 3,
                   }}
                   variant="contained"
                   onClick={() => handleFindLawyers(firm.id)}

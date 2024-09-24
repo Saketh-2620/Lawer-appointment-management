@@ -36,11 +36,9 @@ const ScheduleAppointment = () => {
   );
 
   useEffect(() => {
-    if (lawyer) {
-      setSelectedTime("");
-      updateAvailableTimes(selectedDate);
-      setDescription("");
-    }
+    setSelectedTime("");
+    updateAvailableTimes(selectedDate);
+    setDescription("");
   }, [lawyer, selectedDate]);
 
   useEffect(() => {
@@ -127,8 +125,6 @@ const ScheduleAppointment = () => {
             mt: 3,
             width: "100%",
             maxWidth: { xs: "100%", sm: "80%", md: "50%" },
-          }}
-          style={{
             backgroundColor: "#f4f5f2",
           }}
         >
@@ -184,8 +180,8 @@ const ScheduleAppointment = () => {
                 availableTimes.length === 0 || !selectedTime || !description
               }
               fullWidth
-              sx={{ mt: 2 }}
-              style={{
+              sx={{
+                mt: 2,
                 backgroundColor:
                   availableTimes.length === 0 || !selectedTime || !description
                     ? null

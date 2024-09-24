@@ -29,15 +29,13 @@ const LawyerList = () => {
           <Grid item size={{ xs: 12, sm: 6, md: 4 }} key={lawyer.id}>
             <Card
               elevation={3}
-              style={{
-                backgroundColor: "#f4f5f2",
-              }}
               sx={{
+                backgroundColor: "#f4f5f2",
                 borderRadius: 5,
               }}
             >
               <CardContent
-                style={{
+                sx={{
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
@@ -58,11 +56,7 @@ const LawyerList = () => {
                     color="primary"
                     onClick={() => handleScheduleAppointment(lawyer.id)}
                     fullWidth
-                    sx={{ mb: 1 }}
-                    style={{
-                      backgroundColor: "#507687",
-                      borderRadius: 10,
-                    }}
+                    sx={{ mb: 1, backgroundColor: "#507687", borderRadius: 3 }}
                   >
                     Schedule Appointment
                   </Button>
@@ -71,8 +65,8 @@ const LawyerList = () => {
                     color="secondary"
                     onClick={() => handleViewAppointmentHistory(lawyer.id)}
                     fullWidth
-                    style={{
-                      borderRadius: 10,
+                    sx={{
+                      borderRadius: 3,
                     }}
                   >
                     Appointment History

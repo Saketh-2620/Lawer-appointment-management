@@ -75,11 +75,9 @@ const AppointmentHistory = () => {
                       borderRadius: 5,
                       display: "flex",
                       flexDirection: "column",
-                    }}
-                    elevation={1}
-                    style={{
                       backgroundColor: "#f4f5f2",
                     }}
+                    elevation={1}
                   >
                     <CardContent>
                       {isFutureAppointment && (
